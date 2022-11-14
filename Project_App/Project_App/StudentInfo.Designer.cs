@@ -30,7 +30,7 @@ namespace Project_App
         private void InitializeComponent()
         {
             this.btnRead = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUploadImage = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@ namespace Project_App
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
             this.groupBoxGender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).BeginInit();
             this.SuspendLayout();
@@ -72,19 +72,19 @@ namespace Project_App
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewStudent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(572, 90);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(465, 259);
-            this.dataGridView1.TabIndex = 45;
+            this.dataGridViewStudent.Location = new System.Drawing.Point(572, 90);
+            this.dataGridViewStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewStudent.Name = "dataGridViewStudent";
+            this.dataGridViewStudent.RowHeadersWidth = 51;
+            this.dataGridViewStudent.RowTemplate.Height = 24;
+            this.dataGridViewStudent.Size = new System.Drawing.Size(465, 259);
+            this.dataGridViewStudent.TabIndex = 45;
             // 
             // Column1
             // 
@@ -346,7 +346,7 @@ namespace Project_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 592);
             this.Controls.Add(this.btnRead);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewStudent);
             this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnModules);
@@ -370,7 +370,8 @@ namespace Project_App
             this.Controls.Add(this.label1);
             this.Name = "StudentInfo";
             this.Text = "StudentInfo";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.StudentInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).EndInit();
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxImage)).EndInit();
@@ -382,7 +383,7 @@ namespace Project_App
         #endregion
 
         private System.Windows.Forms.Button btnRead;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewStudent;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button btnUploadImage;

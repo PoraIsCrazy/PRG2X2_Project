@@ -16,5 +16,13 @@ namespace Project_App
         {
             InitializeComponent();
         }
+
+        private void StudentInfo_Load(object sender, EventArgs e)
+        {
+            StudentGetSet student = new StudentGetSet();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = student.GetStudent();
+            dataGridViewStudent.DataSource = bindingSource;
+        }
     }
 }

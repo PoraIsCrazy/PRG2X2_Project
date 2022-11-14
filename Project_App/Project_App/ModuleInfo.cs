@@ -16,5 +16,13 @@ namespace Project_App
         {
             InitializeComponent();
         }
+
+        private void ModuleInfo_Load(object sender, EventArgs e)
+        {
+            ModuleGetSet module = new ModuleGetSet();
+            BindingSource source = new BindingSource();
+            source.DataSource = module.GetModule();
+            dataGridViewModule.DataSource = source;
+        }
     }
 }

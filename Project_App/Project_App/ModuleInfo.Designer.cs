@@ -29,7 +29,7 @@ namespace Project_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewModule = new System.Windows.Forms.DataGridView();
             this.Text = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.URL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,25 +45,25 @@ namespace Project_App
             this.label10 = new System.Windows.Forms.Label();
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModule)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewModule
             // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewModule.AllowUserToResizeColumns = false;
+            this.dataGridViewModule.AllowUserToResizeRows = false;
+            this.dataGridViewModule.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewModule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewModule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Text,
             this.URL});
-            this.dataGridView1.Location = new System.Drawing.Point(171, 387);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(590, 154);
-            this.dataGridView1.TabIndex = 45;
+            this.dataGridViewModule.Location = new System.Drawing.Point(171, 387);
+            this.dataGridViewModule.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewModule.Name = "dataGridViewModule";
+            this.dataGridViewModule.RowHeadersWidth = 51;
+            this.dataGridViewModule.RowTemplate.Height = 24;
+            this.dataGridViewModule.Size = new System.Drawing.Size(590, 154);
+            this.dataGridViewModule.TabIndex = 45;
             // 
             // Text
             // 
@@ -215,7 +215,7 @@ namespace Project_App
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 668);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewModule);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -230,8 +230,8 @@ namespace Project_App
             this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.label1);
             this.Name = "ModuleInfo";
-            this.Text = "ModuleInfo";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ModuleInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +239,7 @@ namespace Project_App
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewModule;
         private System.Windows.Forms.DataGridViewTextBoxColumn Text;
         private System.Windows.Forms.DataGridViewTextBoxColumn URL;
         private System.Windows.Forms.Label label7;
