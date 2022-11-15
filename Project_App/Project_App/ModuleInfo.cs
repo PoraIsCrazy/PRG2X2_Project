@@ -31,7 +31,12 @@ namespace Project_App
             module.Name1 = textBox1.Text;
             module.Code1 = txtModules.Text;
             module.Description1 = textBox2.Text;
-            dataGridViewModule.Refresh();
+
+
+            ModuleGetSet module2 = new ModuleGetSet();
+            BindingSource source = new BindingSource();
+            source.DataSource = module2.GetModule();
+            dataGridViewModule.DataSource = source;
         }
     }
 }

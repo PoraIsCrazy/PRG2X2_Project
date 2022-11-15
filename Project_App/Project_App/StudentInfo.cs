@@ -51,7 +51,11 @@ namespace Project_App
             }
             call.Gender1 = gender;
             call.DOB1 = dateOfBirth.Value;
-            dataGridViewStudent.Refresh();
+
+            StudentGetSet student = new StudentGetSet();
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = student.GetStudent();
+            dataGridViewStudent.DataSource = bindingSource;
         }
     }
 }
