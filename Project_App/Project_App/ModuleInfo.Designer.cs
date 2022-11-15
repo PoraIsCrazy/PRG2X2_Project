@@ -159,6 +159,7 @@ namespace Project_App
             this.btnCreate.TabIndex = 37;
             this.btnCreate.Text = "Save To Database (Create)";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtModules
             // 

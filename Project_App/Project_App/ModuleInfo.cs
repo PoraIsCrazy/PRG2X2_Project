@@ -24,5 +24,14 @@ namespace Project_App
             source.DataSource = module.GetModule();
             dataGridViewModule.DataSource = source;
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            ModuleGetSet module = new ModuleGetSet();
+            module.Name1 = textBox1.Text;
+            module.Code1 = txtModules.Text;
+            module.Description1 = textBox2.Text;
+            dataGridViewModule.Refresh();
+        }
     }
 }
